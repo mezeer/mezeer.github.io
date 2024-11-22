@@ -121,3 +121,11 @@ section {
     font-size: 18px;
     border-top: 5px solid #b22222;
 }
+
+.header-image {
+    width: 300%; /* Scale the width to 300% */
+    height: auto; /* Maintain aspect ratio */
+    max-width: none; /* Allow the image to scale beyond its container */
+    display: block;
+    margin: 0 auto; /* Center the image */
+}
