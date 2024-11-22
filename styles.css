@@ -1,0 +1,123 @@
+/* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5dc; /* Cream background for vintage style */
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+}
+
+/* Header Styles */
+.poster-header {
+    text-align: center;
+    background-color: #d9534f; /* Propaganda red */
+    color: #fff;
+    padding: 20px 0;
+    border-bottom: 5px solid #b22222;
+}
+
+.poster-header h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.poster-header .header-image {
+    width: 150px;
+    margin: 15px 0;
+}
+
+.poster-header .uncle-sam-caption {
+    font-size: 20px;
+    margin: 10px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.poster-header .subtext {
+    font-style: italic;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Section Styles */
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    flex-wrap: wrap;
+}
+
+.problem-section {
+    background-color: #333; /* Dark background for the problem */
+    color: #fff;
+    flex-direction: row-reverse; /* Text on left, image on right */
+}
+
+.solution-section {
+    background-color: #d9edf7; /* Light blue background for solution */
+    color: #007bff;
+    flex-direction: row; /* Text on right, image on left */
+}
+
+/* Text Content */
+.text-content {
+    flex: 1;
+    padding: 20px;
+    max-width: 600px;
+}
+
+.text-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.text-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.text-content ul li {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.red-x {
+    color: #d9534f;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.experts-agree {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Image Content */
+.image-content {
+    flex: 1;
+    text-align: center;
+    max-width: 600px;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #d3d3d3;
+}
+
+/* Footer Styles */
+.poster-footer {
+    text-align: center;
+    background-color: #f5f5dc;
+    padding: 15px 0;
+    font-size: 18px;
+    border-top: 5px solid #b22222;
+}
