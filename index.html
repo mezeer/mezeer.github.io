@@ -5,6 +5,693 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Say No to Traditional Language Learning</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5dc;
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cinzel', serif;
+            text-transform: uppercase;
+        }
+
+        /* Header Styles */
+        .poster-header {
+            text-align: center;
+            background-color: #d9534f;
+            color: #fff;
+            padding: 10px 0;
+            border-bottom: 5px solid #b22222;
+        }
+
+        .poster-header h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+
+        .poster-header .header-image {
+            width: 150px;
+            margin: 10px 0;
+        }
+
+        .poster-header .uncle-sam-caption {
+            font-size: 20px;
+            margin: 5px 0;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .poster-header .subtext {
+            font-style: italic;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        /* Section Styles */
+        section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 10px;
+            flex-wrap: wrap;
+        }
+
+        .problem-context-section {
+            background-color: #6c757d;
+            color: #fff;
+            padding: 30px;
+            border-top: 5px solid #b22222;
+            border-bottom: 5px solid #b22222;
+            max-width: 800px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+        }
+
+        .problem-section {
+            background-color: #333;
+            color: #fff;
+            padding: 30px;
+            flex-direction: row-reverse;
+            border-top: 5px solid #b22222;
+            border-bottom: 5px solid #b22222;
+            max-width: 800px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+        }
+
+        .experts-section {
+            background-color: #ffcc00;
+            color: #333;
+            padding: 30px;
+            border-top: 5px solid #b22222;
+            border-bottom: 5px solid #b22222;
+            max-width: 800px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+        }
+
+        .solution-section {
+            background-color: #d9edf7;
+            color: #007bff;
+            padding: 30px;
+            border-top: 5px solid #b22222;
+            border-bottom: 5px solid #b22222;
+            max-width: 800px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+        }
+
+        .next-steps-section {
+            background-color: #4682b4;
+            color: #fff;
+            padding: 30px;
+            border-top: 5px solid #b22222;
+            border-bottom: 5px solid #b22222;
+            max-width: 800px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+        }
+
+        /* Text Content */
+        .text-content {
+            flex: 1;
+            padding: 10px;
+            max-width: 600px;
+        }
+
+        .text-content h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .text-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .text-content ul li {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .red-x {
+            color: #d9534f;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        .experts-agree {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Image Content */
+        .image-content {
+            flex: 1;
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .image-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 3px solid #d3d3d3;
+        }
+
+        /* Footer Styles */
+        .poster-footer {
+            text-align: center;
+            background-color: #f5f5dc;
+            padding: 15px 0;
+            font-size: 18px;
+            border-top: 5px solid #b22222;
+        }
+
+        .newspaper-border {
+            border: 10px solid #ddd;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            outline: 5px solid #ccc;
+            max-width: 100%;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .patriotic-section {
+            text-align: center;
+            background-color: #003366;
+            color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            border-top: 5px solid #b22222;
+            border-bottom: 5px solid #b22222;
+            max-width: 800px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .patriotic-section h2 {
+            font-size: 28px;
+            font-family: 'Cinzel', serif;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .patriotic-section p {
+            font-size: 18px;
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .poster-footer {
+            text-align: center;
+            background-color: #f5f5dc;
+            padding: 30px;
+            font-size: 18px;
+            border-top: 5px solid #b22222;
+        }
+
+
+        .qr-code {
+            width: 350px;
+            margin: 10px auto;
+            display: block;
+        }
+
+        /* Reference Styles */
+        .references {
+            text-align: left;
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .references li {
+            font-size: 18px;
+            margin-bottom: 10px;
+            line-height: 1.5;
+            text-indent: -0.5in;
+            padding-left: 0.5in;
+        }
+
+        .references a {
+            target: _blank;
+        }
+
+        /* Problem Section and Experts Section - Wider Layout */
+.problem-section, .experts-section {
+    max-width: none; /* Remove width constraint */
+    width: 90%; /* Use 90% of the screen width */
+    margin: 20px auto; /* Center the section horizontally */
+    padding: 40px 20px; /* Add more padding for a spacious layout */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhance shadow for depth */
+    border-radius: 10px; /* Add rounded corners for aesthetic */
+}
+
+/* Text Content */
+.text-content {
+    flex: 2; /* Increase flex space for text */
+    margin-right: 20px; /* Add spacing between text and image */
+    max-width: 70%; /* Allow the text to take up more width */
+}
+
+/* Image Content */
+.image-content {
+    flex: 1; /* Image occupies smaller flex space */
+    max-width: 30%; /* Limit the image to one-third of the section width */
+    margin-left: 20px; /* Add spacing between image and text */
+}
+
+/* Image Styles */
+.image-content img {
+    width: 100%; /* Ensure the image scales to its container */
+    border-radius: 10px; /* Rounded corners for the image */
+    border: 3px solid #d3d3d3; /* Subtle border around the image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Adjust for Flex Wrap on Small Screens */
+@media (max-width: 768px) {
+    .problem-section, .experts-section {
+        flex-direction: column; /* Stack text and image vertically */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+    .text-content, .image-content {
+        max-width: 100%; /* Allow full-width content */
+        margin: 0; /* Remove margins for better fit */
+    }
+    .image-content {
+        margin-top: 20px; /* Add spacing between stacked text and image */
+    }
+}
+
+.problem-section {
+    max-width: 90%;
+    width: 90%;
+    margin: 20px auto;
+    padding: 40px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+}
+
+.problem-section .image-content {
+    flex: 1;
+    max-width: 40%; /* The image takes up 40% of the section width */
+    margin-right: 40px; /* Add spacing between the image and text */
+    text-align: center;
+}
+
+.problem-section .image-content img {
+    width: 100%; /* Ensure the image scales well */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add subtle shadow for depth */
+}
+
+.problem-section .text-content {
+    flex: 2; /* Text takes up the remaining space */
+    line-height: 1.8; /* Add line spacing for readability */
+}
+
+.problem-section .text-content h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px; /* Add spacing below the heading */
+    text-transform: uppercase;
+}
+
+.problem-section .text-content ul {
+    padding-left: 20px; /* Add left padding for better indentation */
+}
+
+.problem-section .text-content ul li {
+    font-size: 20px; /* Increase font size for readability */
+    margin: 15px 0; /* Add spacing between list items */
+}
+
+@media (max-width: 768px) {
+    .problem-section {
+        flex-direction: column; /* Stack image and text vertically on smaller screens */
+        text-align: center; /* Center-align everything for small screens */
+    }
+
+    .problem-section .image-content {
+        margin-right: 0; /* Remove margin for stacking */
+        margin-bottom: 20px; /* Add spacing below the image */
+    }
+
+    .problem-section .text-content {
+        text-align: left; /* Keep the text left-aligned */
+    }
+}
+
+.experts-section {
+    max-width: 80%;
+    margin: 40px auto;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+    justify-content: space-between; /* Space out text and image */
+    background-color: #f8f9fa;
+    color: #333;
+    gap: 20px; /* Space between text and image */
+}
+
+.experts-section .text-content {
+    flex: 2;
+    max-width: 60%; /* Constrain text width for readability */
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.experts-section .text-content h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #b22222;
+    text-align: center;
+}
+
+.experts-section .text-content ul {
+    list-style: disc;
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.experts-section .text-content ul li {
+    margin-bottom: 10px;
+}
+
+.experts-section .image-content {
+    flex: 1;
+    max-width: 30%; /* Adjust image width for balance */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+.experts-section .image-content img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 3px solid #ddd;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .experts-section {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center;
+        padding: 20px;
+    }
+
+    .experts-section .text-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .experts-section .image-content {
+        max-width: 100%;
+        margin-top: 20px; /* Add spacing above the image */
+    }
+}
+
+/* General Section Styling */
+section {
+    margin: 20px auto;
+    padding: 40px;
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    color: #fff;
+    text-align: left; /* Align text to the left for better readability */
+    line-height: 1.8;
+}
+
+/* Problem Context Section */
+.problem-context-section {
+    background: linear-gradient(135deg, #556080, #7f8a9a); /* Subtle gradient */
+    border-top: 5px solid #d9534f;
+    border-bottom: 5px solid #b22222;
+}
+
+.problem-context-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ffcc00; /* Add contrast for the heading */
+}
+
+/* Problem Section */
+.problem-section {
+    background: linear-gradient(135deg, #333, #555); /* Dark gradient for contrast */
+    border-top: 5px solid #b22222;
+    border-bottom: 5px solid #d9534f;
+    color: #fff;
+}
+
+.problem-section h2 {
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #ffcc00; /* Highlight the heading */
+    margin-bottom: 20px;
+}
+
+/* Next Steps Section */
+.next-steps-section {
+    background: linear-gradient(135deg, #4682b4, #5a9bd3); /* Blue gradient */
+    border-top: 5px solid #b22222;
+    border-bottom: 5px solid #003366;
+    color: #f0f8ff; /* Soft white text */
+}
+
+.next-steps-section h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #f8f9fa;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Add subtle shadow */
+}
+
+/* Conclusion Section */
+.conclusion-section {
+    background: linear-gradient(135deg, #8b0000, #b22222); /* Deep red gradient */
+    border-top: 5px solid #d9534f;
+    border-bottom: 5px solid #7f0000;
+    color: #fefefe;
+    padding: 50px;
+}
+
+.conclusion-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    section {
+        padding: 20px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    section p, section ul {
+        max-width: 100%;
+    }
+}
+
+
+/* Section Styles */
+.next-steps-section, .conclusion-section {
+    padding: 40px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 80%;
+    text-align: left;
+}
+
+/* Path Forward Section */
+.next-steps-section {
+    background: #4682b4;
+    color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.step {
+    flex: 1;
+    background: #5a9bd3;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.step .icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.step h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.step p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #f0f8ff;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .steps-container {
+        flex-direction: column;
+    }
+
+    .step {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Conclusion */
+/* Conclusion Section */
+.conclusion-section {
+    background: linear-gradient(135deg, #8b0000, #b22222); /* Red gradient */
+    color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 80%;
+    text-align: center;
+    line-height: 1.8;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.conclusion-section h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+.conclusion-section .main-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #f8f8f8;
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.conclusion-section .cta-box {
+    background: #d9534f; /* Bright red box for emphasis */
+    color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.conclusion-section .cta-box h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.conclusion-section .cta-box p {
+    font-size: 16px;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.conclusion-section .cta-box .cta-image {
+    width: 200px;
+    margin: 20px auto;
+    display: block;
+}
+
+.conclusion-section .cta-box .qr-code {
+    width: 150px;
+    margin: 20px auto;
+    display: block;
+    border: 2px solid #fff; /* Optional: Add a border around the QR code */
+    border-radius: 10px; /* Optional: Slight rounding of corners */
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .conclusion-section {
+        padding: 20px;
+    }
+
+    .conclusion-section h2 {
+        font-size: 28px;
+    }
+
+    .conclusion-section .main-text,
+    .conclusion-section .cta-box p {
+        font-size: 16px;
+    }
+
+    .conclusion-section .cta-box .cta-image {
+        width: 150px;
+    }
+
+    .conclusion-section .cta-box .qr-code {
+        width: 120px;
+    }
+}
+
+
+    </style>
 </head>
 <body>
     <header class="poster-header">
@@ -13,7 +700,6 @@
         <p class="uncle-sam-caption">Uncle Sam says: <strong>Embrace Immersion!</strong></p>
         <p class="subtext">The Future of Language Mastery</p>
     </header>
-
 
     <!-- New Section: Patriotic Endorsement -->
     <section class="patriotic-section">
@@ -29,8 +715,15 @@
         </p>
     </section>
 
-
     <main>
+        <!-- New Problem Context Section -->
+        <section class="problem-context-section">
+            <div class="text-content">
+                <h2>The Struggle: A History of Traditional Methods</h2>
+                <p>For far too long, Americans have suffered at the hands of traditional language learning methods. The outdated, rigid classroom structure has left many feeling disillusioned and unmotivated, often associating language learning with frustration and failure. This approach, which prioritizes rote memorization and grammatical rules over meaningful communication, has proven ineffective for most learners. The need for change has never been more pressing.</p>
+            </div>
+        </section>
+
         <!-- Problem Section -->
         <section class="problem-section">
             <div class="text-content">
@@ -42,32 +735,128 @@
                 </ul>
             </div>
             <div class="image-content">
-                <img  class="newspaper-border" src="assets/teacher.webp" alt="Uncle Sam Halt" class="header-image" style="width:400px">
+                <img src="assets/teacher.webp" alt="Traditional Teacher Illustration">
             </div>
         </section>
+        
 
- <!-- Solution Section -->
-<section class="solution-section">
-    <div class="text-content">
-        <h2>The Solution: Immersion Learning</h2>
-        <p class="experts-agree">ALL THE EXPERTS AGREE!</p>
-        <ul>
-            <li>Venditti (2021): Enhanced engagement with TPRS.</li>
-            <li>Seibert Hanson & Brown (2019): 30% retention improvement with Anki.</li>
-            <li>Ali et al. (2019): Communicative methods boost motivation and proficiency.</li>
-            <li>Kawaguchi (2021): Practical applications of digital tools.</li>
-            <li>Zhang (2023): Benefits of native language transfer.</li>
-            <li>Hwang et al. (2024): Sustained proficiency with MALL.</li>
-        </ul>
-    </div>
-    <div class="image-content">
-        <img class="newspaper-border" src="assets/experts.webp" alt="Uncle Sam Halt" style="width:400px">
-    </div>
-</section>
-    </main>
+        <!-- Solution Section -->
+        <section class="experts-section">
+            <div class="text-content">
+                <h2>The Experts Weigh In</h2>
+                <ul>
+                    <li>
+                        Venditti (2021) showed that using comprehensible input, such as Teaching Proficiency through Reading and Storytelling (TPRS),
+                        engages students and shifts focus from rote grammar to meaningful communication.
+                    </li>
+                    <li>
+                        Seibert Hanson and Brown (2019) found that mobile-assisted spaced-repetition tools like Anki improve vocabulary retention,
+                        though repetitive use may reduce motivation.
+                    </li>
+                    <li>
+                        Ali, Khan, and Masroor (2019) emphasized anxiety-reducing, communicative methods for better classroom engagement in under-resourced settings.
+                    </li>
+                    <li>
+                        Kawaguchi (2021) advocated for digital tools like e-tandem to support language learning, highlighting challenges in regional disparities.
+                    </li>
+                </ul>
+            </div>
+            <div class="image-content">
+                <img src="assets/experts.webp" alt="Experts discussing language learning">
+            </div>
+        </section>
+        
+        
+        
+
+        <!-- Next Steps Section -->
+        <section class="next-steps-section">
+            <h2>A CLEAR PATH FORWARD</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <span class="icon">🎯</span>
+                    <h3>Embrace immersive techniques</h3>
+                    <p>TPRS and other meaningful methods lead to deeper learning.</p>
+                </div>
+                <div class="step">
+                    <span class="icon">💻</span>
+                    <h3>Leverage digital tools</h3>
+                    <p>Use apps like Anki to improve vocabulary retention.</p>
+                </div>
+                <div class="step">
+                    <span class="icon">🌐</span>
+                    <h3>Foster Real-World Engagement</h3>
+                    <p>Exposing learners to meaningful, comprehensible input in real-life contexts, making language acquisition natural and anxiety-free.</p>
+                    
+                </div>
+            </div>
+        </section>
+        
+        
+        
+
+        <section class="conclusion-section">
+            <h2>CONCLUSION</h2>
+            <p class="main-text">
+                The path is clear: immersive and input-based techniques offer the most effective way to master a language. By following expert guidance, learners can achieve fluency faster and more confidently.
+            </p>
+            <div class="cta-box">
+                <h3>🌟 JOIN THE REVOLUTION</h3>
+                <p>Take the first step toward transforming how you learn. Together, we can redefine language mastery!</p>
+               
+            </div>
+        </section>
+        
+        
+
+        
+
     <footer class="poster-footer" style="background-color: #EAEAE1;">
-        <p>Join the Revolution: Start Learning Smarter Today!</p>
-        <img src="assets/revolution.webp" alt="Uncle Sam Halt" class="header-image" style="width:400px">
+        <p>Start Learning Smarter Today!</p>
+        <img src="assets/revolution.webp" alt="Revolution graphic encouraging language learning change" class="header-image" style="width:300px">
+        <p>Scan the QR code below to learn more:</p>
+        <img src="assets/qr-code.png" alt="QR code linking to resources" class="qr-code">
+        <footer class="poster-footer" style="background-color: #EAEAE1;">
+            <h3>References</h3>
+            <ul class="references">
+                <li>
+                    Venditti, E. (2021). Using comprehensible input in the Latin classroom to enhance language proficiency. 
+                    <i>Journal of Classics Teaching, 22</i>, 22–28. 
+                    <a href="https://doi.org/10.1017/s2058631021000039" target="_blank">https://doi.org/10.1017/s2058631021000039</a>
+                </li>
+                <li>
+                    Seibert Hanson, A. E., & Brown, C. M. (2019). Enhancing L2 learning through a mobile assisted spaced-repetition tool: An effective but bitter pill? 
+                    <i>Computer Assisted Language Learning, 33</i>, 133–155. 
+                    <a href="https://doi.org/10.1080/09588221.2018.1552975" target="_blank">https://doi.org/10.1080/09588221.2018.1552975</a>
+                </li>
+                <li>
+                    Ali, Z., Khan, T., & Masroor, F. (2019, December 31). Managing young learners' motivation towards English language learning through the application of language acquisition theories. 
+                    <i>The Dialogue.</i> 
+                    <a href="https://advance-lexis-com.ezproxy3.library.arizona.edu/api/document?collection=news&id=urn%3acontentItem%3a5Y85-N061-F00C-62WX-00000-00&context=1519360&identityprofileid=TJK23651402" target="_blank">https://advance-lexis-com.ezproxy3.library.arizona.edu/api/document?collection=news&id=urn%3acontentItem%3a5Y85-N061-F00C-62WX-00000-00&context=1519360&identityprofileid=TJK23651402</a>
+                </li>
+                <li>
+                    Mujahidah, Hasanah, N., Yusuf, Muh., Zulfah, & Fatmasyamsinar, A. A. (2024). The implementation of Ankiapp to improve students’ vocabulary mastery. 
+                    <i>SALTeL Journal (Southeast Asia Language Teaching and Learning), 7(1)</i>, 9–18. 
+                    <a href="https://doi.org/10.35307/saltel.v7i1.115" target="_blank">https://doi.org/10.35307/saltel.v7i1.115</a>
+                </li>
+                <li>
+                    Zhang, L. (2023). Native language transfer in vocabulary acquisition: An empirical study from Connectionist Perspective. 
+                    <i>Journal of Language Teaching and Research, 14(2)</i>, 446–458. 
+                    <a href="https://doi.org/10.17507/jltr.1402.21" target="_blank">https://doi.org/10.17507/jltr.1402.21</a>
+                </li>
+                <li>
+                    Kawaguchi, S. (2021). Second Language Acquisition and Digital Learning in Asia. 
+                    <i>Asiatic: IIUM Journal of English Language and Literature, 15(1)</i>, 36–52. 
+                    <a href="https://doi.org/10.31436/asiatic.v15i1.2309" target="_blank">https://doi.org/10.31436/asiatic.v15i1.2309</a>
+                </li>
+            </ul>
+        </footer>
+        
     </footer>
+
+    <div class="footer" style="text-align: center";>
+        <p>Ethan Terry | November 26, 2024 | Digital Poster</p>
+    </div>
+    
 </body>
 </html>
